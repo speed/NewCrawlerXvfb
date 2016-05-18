@@ -12,3 +12,11 @@ RUN apt-get update
 RUN apt-get -y install google-chrome-stable
 
 RUN apt-get -y install xvfb
+
+ENV DISPLAY :99
+
+# Install Xvfb init script
+ADD xvfb_init /etc/init.d/xvfb
+RUN chmod a+x /etc/init.d/xvfb
+ADD xvfb-daemon-run /usr/bin/xvfb-daemon-run
+RUN chmod a+x /usr/bin/xvfb-daemon-run
