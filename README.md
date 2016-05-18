@@ -1,4 +1,4 @@
 # NewCrawlerXvfb
 
 
->>docker pull newcrawler/xvfb
+> docker pull newcrawler/xvfb
