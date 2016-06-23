@@ -13,12 +13,13 @@
     docker run -itd --name=newcrawlerxvfb newcrawler/xvfb
     docker attach newcrawlerxvfb
     
+    # access container
+    
     export DISPLAY=:99
     /etc/init.d/xvfb start
     
     ps aux|grep Xvfb
     
-    # access container
     cd ~
     apt-get -y install unzip
     wget http://chromedriver.storage.googleapis.com/2.22/chromedriver_linux64.zip
