@@ -10,3 +10,9 @@
     cd NewCrawlerXvfb-master
     
     docker build -t newcrawler/xvfb .
+    docker run -itd --name=newcrawlerxvfb newcrawler/xvfb
+    docker attach newcrawlerxvfb
+    
+    export DISPLAY=:99
+    /etc/init.d/xvfb start
+    
