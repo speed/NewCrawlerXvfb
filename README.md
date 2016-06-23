@@ -13,7 +13,7 @@
     docker run -itd --name=newcrawlerxvfb newcrawler/xvfb
     docker attach newcrawlerxvfb
     
-    # access container
+# Access container
     
     export DISPLAY=:99
     /etc/init.d/xvfb start
