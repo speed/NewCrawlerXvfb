@@ -16,3 +16,12 @@
     export DISPLAY=:99
     /etc/init.d/xvfb start
     
+    ps aux|grep Xvfb
+
+    wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  "http://download.oracle.com/otn-pub/java/jdk/8u74-b02/server-jre-8u74-linux-x64.tar.gz" -O server-jre-linux.tar.gz
+    
+    mkdir ./jre && tar -xzvf server-jre-linux.tar.gz -C ./jre --strip-components 1
+    
+    wget https://github.com/speed/NewCrawlerXvfb/raw/master/ChromeTest.jar
+    
+    jre/bin/java -jar ChromeTest.jar
